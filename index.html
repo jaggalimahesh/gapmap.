@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f7f8fc">
+    <meta name="description" content="GapMap helps students discover learning gaps, practise concepts, and track their learning progress.">
+
+    <title>GapMap — Find Your Learning Gaps</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="topbar">
+        <a href="#" class="brand" aria-label="GapMap home">
+            <span class="brand-mark">G</span>
+            <span>GapMap</span>
+        </a>
+
+        <nav class="nav-links" aria-label="Main navigation">
+            <a href="#how-it-works">How it works</a>
+            <a href="#student-app">Student</a>
+            <a href="#teacher-insights">Teacher insights</a>
+        </nav>
+
+        <button class="btn btn-primary" id="startBtn" type="button">
+      Start learning
+      <span aria-hidden="true">↗</span>
+    </button>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero" id="home">
+            <div class="hero-copy">
+                <div class="eyebrow">
+                    <span class="status-dot"></span> PERSONALIZED LEARNING, MADE SIMPLE
+                </div>
+
+                <h1>
+                    Find the gap.<br>
+                    <span class="gradient-text">Build the skill.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Every student learns differently. GapMap helps you discover what you understand, identify what needs work, and practise the right concept next.
+                </p>
+
+                <div class="hero-actions">
+                    <button class="btn btn-primary btn-large" id="heroStartBtn" type="button">
+            Discover my gaps <span aria-hidden="true">→</span>
+          </button>
+                    <a class="btn btn-secondary btn-large" href="#how-it-works">
+            See how it works
+          </a>
+                </div>
+
+                <div class="hero-trust">
+                    <div class="avatar-stack" aria-hidden="true">
+                        <span>A</span>
+                        <span>R</span>
+                        <span>S</span>
+                    </div>
+                    <p>Learn at your pace. Improve one concept at a time.</p>
+                </div>
+            </div>
+
+            <div class="hero-visual" aria-label="Example learning progress dashboard">
+                <div class="floating-card floating-card-top">
+                    <span class="mini-icon">✦</span>
+                    <div>
+                        <strong>Learning gap found</strong>
+                        <small>Fractions · Step 1</small>
+                    </div>
+                </div>
+
+                <div class="preview-card">
+                    <div class="preview-header">
+                        <div>
+                            <span class="muted-label">YOUR LEARNING MAP</span>
+                            <h3>Concept progress</h3>
+                        </div>
+                        <span class="pill pill-purple">Demo preview</span>
+                    </div>
+
+                    <div class="progress-overview">
+                        <div class="progress-ring">
+                            <div class="progress-ring-inner">
+                                <strong>72%</strong>
+                                <small>Progress</small>
+                            </div>
+                        </div>
+
+                        <div class="progress-summary">
+                            <strong>Keep it going!</strong>
+                            <p>Small steps make a big difference.</p>
+                            <div class="mini-progress">
+                                <span style="width:72%"></span>
+                            </div>
+                            <small>Example data for illustration</small>
+                        </div>
+                    </div>
+
+                    <div class="concept-list">
+                        <div class="concept-row">
+                            <span class="concept-icon concept-green">✓</span>
+                            <div class="concept-info">
+                                <strong>Integers</strong>
+                                <div class="mini-progress"><span style="width:90%"></span></div>
+                            </div>
+                            <span class="concept-score">90%</span>
+                        </div>
+
+                        <div class="concept-row">
+                            <span class="concept-icon concept-orange">↗</span>
+                            <div class="concept-info">
+                                <strong>Fractions</strong>
+                                <div class="mini-progress"><span style="width:45%"></span></div>
+                            </div>
+                            <span class="concept-score">45%</span>
+                        </div>
+
+                        <div class="concept-row">
+                            <span class="concept-icon concept-blue">◎</span>
+                            <div class="concept-info">
+                                <strong>Algebra</strong>
+                                <div class="mini-progress"><span style="width:65%"></span></div>
+                            </div>
+                            <span class="concept-score">65%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="floating-card floating-card-bottom">
+                    <span class="success-icon">✓</span>
+                    <div>
+                        <strong>Next step ready</strong>
+                        <small>Personalized practice</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VALUE STRIP -->
+        <section class="value-strip" aria-label="GapMap features">
+            <div class="value-item">
+                <span class="value-icon">⌕</span>
+                <div>
+                    <strong>Find learning gaps</strong>
+                    <small>Identify concepts to improve</small>
+                </div>
+            </div>
+
+            <div class="value-item">
+                <span class="value-icon">✦</span>
+                <div>
+                    <strong>Learn step by step</strong>
+                    <small>Focused lessons and examples</small>
+                </div>
+            </div>
+
+            <div class="value-item">
+                <span class="value-icon">↗</span>
+                <div>
+                    <strong>Track improvement</strong>
+                    <small>Practise and try again</small>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOW IT WORKS -->
+        <section class="section how-section" id="how-it-works">
+            <div class="section-heading">
+                <div class="eyebrow">HOW GAPMAP WORKS</div>
+                <h2>From confusion to confidence.</h2>
+                <p>A simple learning journey that focuses on understanding, not just marks.</p>
+            </div>
+
+            <div class="steps-grid">
+                <article class="step-card">
+                    <div class="step-number">01</div>
+                    <div class="step-icon">⌕</div>
+                    <h3>Diagnose</h3>
+                    <p>Answer a short set of questions to identify concepts that may need attention.</p>
+                </article>
+
+                <article class="step-card">
+                    <div class="step-number">02</div>
+                    <div class="step-icon">✦</div>
+                    <h3>Learn</h3>
+                    <p>Review a focused explanation and worked example for the concept you missed.</p>
+                </article>
+
+                <article class="step-card">
+                    <div class="step-number">03</div>
+                    <div class="step-icon">↗</div>
+                    <h3>Practise</h3>
+                    <p>Try targeted questions, check your understanding, and work toward mastery.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- STUDENT APP -->
+        <section class="section student-section" id="student-app">
+            <div class="section-heading">
+                <div class="eyebrow">YOUR LEARNING WORKSPACE</div>
+                <h2>Your next step starts here.</h2>
+                <p>Choose a language and begin your learning-gap assessment.</p>
+            </div>
+
+            <div class="app-shell">
+                <aside class="app-sidebar">
+                    <a href="#student-app" class="sidebar-brand">
+                        <span class="brand-mark">G</span>
+                        <span>GapMap</span>
+                    </a>
+
+                    <div class="sidebar-label">WORKSPACE</div>
+
+                    <button class="sidebar-link active" id="dashboardNav" type="button">
+            <span>▦</span> Overview
+          </button>
+
+                    <button class="sidebar-link" id="diagnosticNav" type="button">
+            <span>⌕</span> Gap assessment
+          </button>
+
+                    <button class="sidebar-link" id="lessonNav" type="button">
+            <span>▤</span> Learning lesson
+          </button>
+
+                    <button class="sidebar-link" id="practiceNav" type="button">
+            <span>✎</span> Practice
+          </button>
+
+                    <div class="sidebar-note">
+                        <span class="sidebar-note-icon">✦</span>
+                        <strong>Progress over perfection.</strong>
+                        <p>Every question is a chance to learn something new.</p>
+                    </div>
+                </aside>
+
+                <div class="app-main">
+                    <div class="app-topbar">
+                        <div>
+                            <span class="muted-label">STUDENT WORKSPACE</span>
+                            <h3 id="appHeading">Welcome to your learning map</h3>
+                        </div>
+
+                        <label class="language-control" for="languageSelect">
+              <span>Language</span>
+              <select id="languageSelect" aria-label="Choose language">
+                <option value="en">English</option>
+                <option value="te">తెలుగు</option>
+                <option value="hi">हिन्दी</option>
+              </select>
+            </label>
+                    </div>
+
+                    <!-- Overview screen -->
+                    <section class="app-screen" id="dashboardScreen">
+                        <div class="welcome-panel">
+                            <div>
+                                <span class="welcome-tag">YOUR PERSONAL LEARNING JOURNEY</span>
+                                <h2>Understand more.<br><span class="gradient-text">Move forward.</span></h2>
+                                <p>Take a quick assessment to discover which maths concepts you should focus on next.</p>
+                                <button class="btn btn-primary" id="beginAssessmentBtn" type="button">
+                  Begin assessment <span aria-hidden="true">→</span>
+                </button>
+                            </div>
+
+                            <div class="welcome-art" aria-hidden="true">
+                                <div class="art-orbit orbit-one"></div>
+                                <div class="art-orbit orbit-two"></div>
+                                <div class="art-center">G</div>
+                                <span class="art-symbol symbol-one">+</span>
+                                <span class="art-symbol symbol-two">÷</span>
+                                <span class="art-symbol symbol-three">x²</span>
+                            </div>
+                        </div>
+
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <span class="stat-label">Concepts available</span>
+                                <strong id="conceptCount">4</strong>
+                                <small>Foundational maths</small>
+                            </div>
+
+                            <div class="stat-card">
+                                <span class="stat-label">Assessments completed</span>
+                                <strong id="assessmentCount">0</strong>
+                                <small>Your learning activity</small>
+                            </div>
+
+                            <div class="stat-card">
+                                <span class="stat-label">Practice attempts</span>
+                                <strong id="practiceCount">0</strong>
+                                <small>Keep building your skills</small>
+                            </div>
+                        </div>
+
+                        <div class="content-panel">
+                            <div class="panel-heading">
+                                <div>
+                                    <h3>Start with the basics</h3>
+                                    <p>Use the diagnostic assessment to identify your next learning step.</p>
+                                </div>
+                                <span class="panel-icon">✦</span>
+                            </div>
+
+                            <div class="concept-preview-grid">
+                                <div class="concept-preview">
+                                    <span class="preview-symbol">½</span>
+                                    <strong>Fractions</strong>
+                                    <small>Parts and proportions</small>
+                                </div>
+                                <div class="concept-preview">
+                                    <span class="preview-symbol">−</span>
+                                    <strong>Integers</strong>
+                                    <small>Positive and negative numbers</small>
+                                </div>
+                                <div class="concept-preview">
+                                    <span class="preview-symbol">x + y</span>
+                                    <strong>Algebra</strong>
+                                    <small>Expressions and variables</small>
+                                </div>
+                                <div class="concept-preview">
+                                    <span class="preview-symbol">x = 2</span>
+                                    <strong>Equations</strong>
+                                    <small>Find the unknown value</small>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Diagnostic screen -->
+                    <section class="app-screen hidden" id="diagnosticScreen">
+                        <div class="content-panel diagnostic-panel">
+                            <div class="panel-heading">
+                                <div>
+                                    <span class="muted-label">QUICK DIAGNOSTIC</span>
+                                    <h2 id="diagnosticTitle">Let's find your learning gaps</h2>
+                                    <p id="diagnosticDescription">Answer each question carefully. You can learn from mistakes.</p>
+                                </div>
+                                <span class="pill pill-purple" id="questionCounter">Question 1</span>
+                            </div>
+
+                            <div class="diagnostic-progress">
+                                <div class="progress-track">
+                                    <span id="diagnosticProgressBar" style="width:0%"></span>
+                                </div>
+                            </div>
+
+                            <div id="questionContainer" aria-live="polite">
+                                <!-- Questions are rendered by app.js -->
+                            </div>
+
+                            <div class="diagnostic-actions">
+                                <button class="btn btn-secondary" id="previousQuestionBtn" type="button">
+                  ← Previous
+                </button>
+                                <button class="btn btn-primary" id="nextQuestionBtn" type="button">
+                  Next question →
+                </button>
+                            </div>
+
+                            <p class="inline-feedback" id="diagnosticFeedback" role="status"></p>
+                        </div>
+                    </section>
+
+                    <!-- Results screen -->
+                    <section class="app-screen hidden" id="resultsScreen">
+                        <div class="content-panel">
+                            <div class="results-header">
+                                <div>
+                                    <span class="eyebrow">YOUR DIAGNOSTIC RESULTS</span>
+                                    <h2 id="resultsTitle">Your learning map</h2>
+                                    <p id="resultsDescription">Review your answers and choose what to learn next.</p>
+                                </div>
+                                <div class="results-score">
+                                    <strong id="resultsScore">0%</strong>
+                                    <span>Assessment score</span>
+                                </div>
+                            </div>
+
+                            <div id="resultsContainer">
+                                <!-- Results are rendered by app.js -->
+                            </div>
+
+                            <div class="results-actions">
+                                <button class="btn btn-secondary" id="retryAssessmentBtn" type="button">
+                  Retake assessment
+                </button>
+                                <button class="btn btn-primary" id="continueLearningBtn" type="button">
+                  Continue learning →
+                </button>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Lesson screen -->
+                    <section class="app-screen hidden" id="lessonScreen">
+                        <div class="content-panel">
+                            <div class="panel-heading">
+                                <div>
+                                    <span class="eyebrow">PERSONALIZED LEARNING</span>
+                                    <h2 id="lessonTitle">Let's learn this concept</h2>
+                                    <p id="lessonDescription">Review the explanation and worked example below.</p>
+                                </div>
+                                <span class="lesson-badge">LEARN</span>
+                            </div>
+
+                            <div id="lessonContainer">
+                                <!-- Lesson content is rendered by app.js -->
+                            </div>
+
+                            <div class="lesson-actions">
+                                <button class="btn btn-secondary" id="backToResultsBtn" type="button">
+                  ← Back to results
+                </button>
+                                <button class="btn btn-primary" id="startPracticeBtn" type="button">
+                  Try practice questions →
+                </button>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Practice screen -->
+                    <section class="app-screen hidden" id="practiceScreen">
+                        <div class="content-panel">
+                            <div class="panel-heading">
+                                <div>
+                                    <span class="eyebrow">CHECK YOUR UNDERSTANDING</span>
+                                    <h2 id="practiceTitle">Practice time</h2>
+                                    <p id="practiceDescription">Use what you learned to solve the next question.</p>
+                                </div>
+                                <span class="pill pill-green">PRACTICE</span>
+                            </div>
+
+                            <div id="practiceContainer" aria-live="polite">
+                                <!-- Practice content is rendered by app.js -->
+                            </div>
+
+                            <div class="practice-actions">
+                                <button class="btn btn-secondary" id="backToLessonBtn" type="button">
+                  ← Review lesson
+                </button>
+                                <button class="btn btn-primary" id="checkPracticeBtn" type="button">
+                  Check answer
+                </button>
+                            </div>
+
+                            <p class="inline-feedback" id="practiceFeedback" role="status"></p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <!-- TEACHER INSIGHTS -->
+        <section class="section teacher-section" id="teacher-insights">
+            <div class="section-heading">
+                <div class="eyebrow">FOR EDUCATORS</div>
+                <h2>See the gaps. Support the learner.</h2>
+                <p>A sample teacher view illustrates how concept-level insights can help prioritize support.</p>
+            </div>
+
+            <div class="teacher-dashboard">
+                <div class="teacher-header">
+                    <div>
+                        <span class="muted-label">TEACHER INSIGHTS</span>
+                        <h3>Class learning overview</h3>
+                    </div>
+                    <span class="pill pill-orange">Sample data</span>
+                </div>
+
+                <div class="teacher-stats">
+                    <div class="teacher-stat">
+                        <span>Students represented</span>
+                        <strong>30</strong>
+                    </div>
+                    <div class="teacher-stat">
+                        <span>Concepts tracked</span>
+                        <strong>4</strong>
+                    </div>
+                    <div class="teacher-stat">
+                        <span>Focus area</span>
+                        <strong>Fractions</strong>
+                    </div>
+                </div>
+
+                <div class="heatmap-panel">
+                    <div class="panel-heading">
+                        <div>
+                            <h3>Concept mastery snapshot</h3>
+                            <p>Illustrative class-level mastery values, not real student records.</p>
+                        </div>
+                    </div>
+
+                    <div class="heatmap-table">
+                        <div class="heatmap-row heatmap-heading">
+                            <span>Concept</span>
+                            <span>Mastery</span>
+                            <span>Status</span>
+                        </div>
+
+                        <div class="heatmap-row">
+                            <span>Integers</span>
+                            <div class="heatmap-track"><span style="width:82%"></span></div>
+                            <span class="status status-good">Strong</span>
+                        </div>
+
+                        <div class="heatmap-row">
+                            <span>Fractions</span>
+                            <div class="heatmap-track"><span style="width:38%"></span></div>
+                            <span class="status status-needs-work">Needs support</span>
+                        </div>
+
+                        <div class="heatmap-row">
+                            <span>Algebraic expressions</span>
+                            <div class="heatmap-track"><span style="width:61%"></span></div>
+                            <span class="status status-progress">Developing</span>
+                        </div>
+
+                        <div class="heatmap-row">
+                            <span>Linear equations</span>
+                            <div class="heatmap-track"><span style="width:54%"></span></div>
+                            <span class="status status-progress">Developing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="teacher-insight-note">
+                    <span class="insight-icon">✦</span>
+                    <div>
+                        <strong>Suggested teaching focus</strong>
+                        <p>Consider a short fractions revision session, followed by targeted practice and a quick reassessment.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section class="final-cta">
+            <div class="final-cta-content">
+                <span class="eyebrow">YOUR NEXT STEP STARTS NOW</span>
+                <h2>Learning is a journey.<br>Map yours with GapMap.</h2>
+                <p>Start with one question. Discover one gap. Make one improvement.</p>
+                <button class="btn btn-light btn-large" id="finalStartBtn" type="button">
+          Start your assessment <span aria-hidden="true">→</span>
+        </button>
+            </div>
+            <div class="cta-decoration cta-decoration-one"></div>
+            <div class="cta-decoration cta-decoration-two"></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <a href="#home" class="brand">
+            <span class="brand-mark">G</span>
+            <span>GapMap</span>
+        </a>
+
+        <p>Helping learners understand what to learn next.</p>
+
+        <span class="footer-note">Hackathon prototype · Demo data only</span>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Visual Studio Code local settings
+.vscode/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Dependencies and build outputs
+node_modules/
+dist/
+build/
+
+# Logs
+npm-debug.log*
+*.log
